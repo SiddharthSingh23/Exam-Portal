@@ -30,7 +30,7 @@ export const Login = () => {
         navigate("/teacher");
         return;
       } else {
-        const res = await axios.post("http://localhost:5399/login", value);
+        const res = await axios.post("https://exam-portal-sid.netlify.app/login", value);
         console.log(res.data);
 
         if (res.data === "User login successfully!") {

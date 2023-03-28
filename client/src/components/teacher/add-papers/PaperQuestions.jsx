@@ -25,7 +25,7 @@ export const PaperQuestions = ({ paperDetails, setValue }) => {
       };
 
       const res = await axios.post(
-        "http://localhost:5399/add-paper",
+        "https://exam-portal-sid.netlify.app/add-paper",
         currentPaper
       );
       console.log(res.data);

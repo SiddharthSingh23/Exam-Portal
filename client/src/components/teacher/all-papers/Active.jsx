@@ -6,7 +6,7 @@ export const Active = () => {
   const [allPapers, setAllPapers] = useState([]);
   useEffect(() => {
     async function fetchData() {
-      const res = await axios.get("http://localhost:5399/all-papers");
+      const res = await axios.get("https://exam-portal-sid.netlify.app/all-papers");
       setAllPapers(res.data);
     }
     fetchData();
