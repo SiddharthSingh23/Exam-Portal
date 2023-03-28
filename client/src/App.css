@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+a,
+li {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    color: blanchedalmond;
+}
