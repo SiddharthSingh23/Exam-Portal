@@ -30,7 +30,7 @@ export const Signup = () => {
 
     // adding user data in mongodb
     try {
-      const res = await axios.post("https://exam-portal-sid.netlify.app/signup", value);
+      const res = await axios.post("/signup", value);
       console.log(res.data);
 
       if (res.data === "Data stored successfully!") {
