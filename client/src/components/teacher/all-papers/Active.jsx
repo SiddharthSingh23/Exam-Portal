@@ -11,7 +11,7 @@ export const Active = () => {
       setAllPapers(res.data);
     }
     fetchData();
-  }, []);
+  }, [BASE_URL]);
 
   return <ViewAllPapers allPapers={allPapers} />;
 };

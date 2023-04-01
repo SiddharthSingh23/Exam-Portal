@@ -53,7 +53,7 @@ export const ViewValidPapers = () => {
       setAllPapers(res.data);
     }
     fetchData();
-  }, []);
+  }, [BASE_URL]);
 
   return (
     <TableContainer sx={{ minWidth: 650, p: "10px 20px" }}>
