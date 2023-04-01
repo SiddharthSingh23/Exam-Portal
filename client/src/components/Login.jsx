@@ -12,7 +12,6 @@ import {
 } from "@mui/material";
 
 export const Login = () => {
-  const { BASE_URL } = process.env;
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -22,8 +21,6 @@ export const Login = () => {
       const data = new FormData(e.target);
       const value = Object.fromEntries(data.entries());
 
-      console.log(process.env);
-
       if (
         process.env.REACT_APP_USER === value.username &&
         process.env.REACT_APP_PASS === value.password
@@ -31,7 +28,7 @@ export const Login = () => {
         navigate("/teacher");
         return;
       } else {
-        const res = await axios.post(`${BASE_URL}/login`, value);
+        const res = await axios.post(`${process.env.BASE_URL}/login`, value);
         console.log(res.data);
 
         if (res.data === "User login successfully!") {
