@@ -13,7 +13,7 @@ import {
 } from "@mui/material";
 
 export const Signup = () => {
-  const { BASE_URL } = process.env;
+  const BASE_URL = process.env.REACT_APP_BASE_URL
   const navigate = useNavigate();
   const [isError, setIsError] = useState(false);
 

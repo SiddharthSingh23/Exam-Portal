@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { ViewAllPapers } from "./ViewAllPapers";
 
 export const Active = () => {
-  const {BASE_URL} = process.env
+  const BASE_URL = process.env.REACT_APP_BASE_URL
   const [allPapers, setAllPapers] = useState([]);
   useEffect(() => {
     async function fetchData() {
