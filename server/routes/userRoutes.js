@@ -7,7 +7,7 @@ const userController = require("../controller/userController");
 const { createUserMiddleware, loginUserMiddleware } = userMiddleware;
 const { createUser, loginUser } = userController;
 
-app.post("/signup", createUserMiddleware, createUser);
+app.post("/create-user", createUserMiddleware, createUser);
 app.post("/login", loginUserMiddleware, loginUser);
 
 module.exports = app;

@@ -13,6 +13,7 @@ import {
 } from "@mui/material";
 
 export const Signup = () => {
+  const { BASE_URL } = process.env;
   const navigate = useNavigate();
   const [isError, setIsError] = useState(false);
 
@@ -30,7 +31,7 @@ export const Signup = () => {
 
     // adding user data in mongodb
     try {
-      const res = await axios.post("/signup", value);
+      const res = await axios.post(`${BASE_URL}/signup`, value);
       console.log(res.data);
 
       if (res.data === "Data stored successfully!") {

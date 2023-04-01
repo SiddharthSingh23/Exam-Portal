@@ -12,6 +12,7 @@ import {
 } from "@mui/material";
 
 export const Login = () => {
+  const { BASE_URL } = process.env;
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -30,7 +31,7 @@ export const Login = () => {
         navigate("/teacher");
         return;
       } else {
-        const res = await axios.post("https://exam-portal-sid.netlify.app/login", value);
+        const res = await axios.post(`${BASE_URL}/login`, value);
         console.log(res.data);
 
         if (res.data === "User login successfully!") {

@@ -6,6 +6,7 @@ import { ViewPaper } from "./ViewPaper";
 import axios from "axios";
 
 export const PaperQuestions = ({ paperDetails, setValue }) => {
+  const {BASE_URL} = process.env
   const [questions, setQuestions] = useState([]);
   const [questionList, setQuestionList] = useState([]);
 
@@ -25,7 +26,7 @@ export const PaperQuestions = ({ paperDetails, setValue }) => {
       };
 
       const res = await axios.post(
-        "https://exam-portal-sid.netlify.app/add-paper",
+        `${BASE_URL}/add-paper`,
         currentPaper
       );
       console.log(res.data);
